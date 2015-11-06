@@ -1,0 +1,109 @@
+// color variables
+$lime-green: #32CD32;
+$white: #FFFFFF;
+
+// override bootstrap variables
+$navbar-default-color: $white;
+$navbar-default-link-color: $white;
+$navbar-default-bg: $lime-green;
+
+// import the CSS framework
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "utilities/mixins";
+
+// z-indices
+$z-index-1: 100;
+$z-index-2: 200;
+
+// font-size
+$fs-0: 50px;
+
+
+// make all images responsive by default
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+}
+
+// override for the 'Home' navigation link
+.navbar-brand {
+  font-size: inherit;
+}
+
+// THESE ARE EXAMPLES YOU CAN MODIFY
+// create your own classes
+// to make views framework-neutral
+.column {
+  @extend .col-md-6;
+  @extend .text-center;
+}
+
+.form {
+  @extend .col-md-6;
+}
+
+.form-centered {
+  @extend .col-md-6;
+  @extend .text-center;
+}
+
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+}
+
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  @extend .container;
+  padding-bottom: 80px;
+  width: 100%;
+  margin-top: 50px; // accommodate the navbar
+  padding: 0; // accommodate the navbar
+
+  .container {
+    padding-top: 50px;
+  }
+}
+
+section {
+  @extend .row;
+  margin-top: 20px;
+}
+
+.bg {
+  @include fixed(20px 0 left 0);
+  @include sizing(100%);
+  background: url(blackboard.jpg) no-repeat center center;
+  background-size: cover;
+  z-index: $z-index-1;
+  top: 0;
+}
+
+.header {
+  color: white;
+  text-shadow: black 0.3em 0.3em 0.3em;
+  background:transparent;
+  font-size: $fs-0;
+  z-index: $z-index-2;
+  margin-top: 100px;
+  padding-left:  50px;
+}
+
+.breadcrumbs {
+  padding-bottom: 30px;
+
+  a:first-child {
+    padding: 0 5px 0 0;
+  }
+
+  a, .current {
+    padding: 0 5px;
+  }
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}

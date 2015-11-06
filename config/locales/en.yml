@@ -1,0 +1,34 @@
+en:
+  navbar:
+    students: Students
+    teachers: Teachers
+    reports: Reports
+    reports_subjects: Subjects
+    logout: Logout
+    signin: Sign in
+    signup: Sign up
+  shared:
+    created: "%{resource} has been created!"
+    updated: "%{resource} has been updated!"
+    deleted: "%{resource} has been deleted!"
+    actions: actions
+    edit: edit
+    show: show
+    delete: delete
+    show_subject_items: show subjects
+    back: Back
+    add_new_item: Add new one
+    subjects: subjects
+  student:
+    columns:
+      first_name: first name
+      last_name: last name
+  teacher:
+    columns:
+      first_name: first name
+      last_name: last name
+      academic_title: academic title
+  subjects:
+    columns:
+      full_name: Full name
+      avg_notes: Notes avarange

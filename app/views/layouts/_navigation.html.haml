@@ -1,0 +1,31 @@
+%nav.navbar-default.navbar-fixed-top
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle{"aria-controls" => "navbar", "aria-expanded" => "true", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to ENV['APP_NAME'], root_path, class: 'navbar-brand'
+    #navbar.navbar-collapse.collapse
+      %ul.nav.navbar-nav
+        %li{ class: active?(students_path) }
+          = link_to t('navbar.students'), students_path
+        %li{ class: active?(teachers_path) }
+          = link_to t('navbar.teachers'), teachers_path
+        %li.dropdown{ class: active?(report_subjects_path) }
+          = link_to '#', class: 'dropdown-toggle', 'aria-expanded' => 'false', 'aria-haspopup' => 'true', 'data-toggle' => 'dropdown', role: 'button' do
+            = t('navbar.reports')
+            %span.caret
+          %ul.dropdown-menu
+            %li{ class: active?(report_subjects_path) }
+              = link_to t('navbar.reports_subjects'), report_subjects_path
+      %ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+          %li
+            = link_to t('navbar.logout'), destroy_user_session_path, method: :delete
+        - else
+          %li
+            = link_to t('navbar.signin'), new_user_session_path
+          %li
+            = link_to t('navbar.signup'), new_user_registration_path

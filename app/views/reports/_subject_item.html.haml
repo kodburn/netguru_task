@@ -1,0 +1,12 @@
+.title
+  = subject_item.decorate.title_with_assigned_teacher
+%table.table.table-condensed
+  %thead
+    %tr
+      %th.full-name= t('subjects.columns.full_name')
+      %th.avg-notes= t('subjects.columns.avg_notes')
+  %tbody
+    - subject_item.students.each do |student|
+      %tr
+        %td= student.decorate.full_name
+        %td= student.decorate.avg_notes(subject_item)

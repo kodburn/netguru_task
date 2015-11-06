@@ -1,0 +1,11 @@
+- breadcrumb :student, student
+%table.table.table-condensed
+  %tbody
+    %tr
+      %td= "#{t('student.columns.first_name')}:"
+      %td= student.first_name
+    %tr
+      %td= "#{t('student.columns.last_name')}:"
+      %td= student.last_name
+
+= link_to t('shared.back'), students_path, class: 'btn btn-default'

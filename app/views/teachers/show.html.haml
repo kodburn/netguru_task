@@ -1,0 +1,14 @@
+- breadcrumb :teacher, teacher
+%table.table.table-condensed
+  %tbody
+    %tr
+      %td= "#{t('teacher.columns.first_name')}:"
+      %td= teacher.first_name
+    %tr
+      %td= "#{t('teacher.columns.last_name')}:"
+      %td= teacher.last_name
+    %tr
+      %td= "#{t('teacher.columns.academic_title')}:"
+      %td= teacher.academic_title
+
+= link_to t('shared.back'), teachers_path, class: 'btn btn-default'

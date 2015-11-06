@@ -1,0 +1,11 @@
+- breadcrumb :teacher_subjects, teacher
+= teacher.decorate.full_name
+%table.table.table-condensed
+  %thead
+    %tr
+      %th= t('subject.title')
+  %tbody
+    - teacher_subject_items.each do |subject_item|
+      %tr
+        %td= subject_item.title
+= link_to t('shared.back'), teachers_path, class: 'btn btn-default'

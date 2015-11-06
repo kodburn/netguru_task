@@ -1,0 +1,13 @@
+- breadcrumb :student_subjects, student
+= student.decorate.full_name
+%table.table.table-condensed
+  %thead
+    %tr
+      %th= t('subject.title')
+      %th= t('subjects.columns.avg_notes')
+  %tbody
+    - student_subject_items.each do |subject_item|
+      %tr
+        %td= subject_item.title
+        %td= student.decorate.avg_notes(subject_item)
+= link_to t('shared.back'), students_path, class: 'btn btn-default'
