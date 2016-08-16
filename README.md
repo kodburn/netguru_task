@@ -66,7 +66,7 @@ These tasks are optional, failure does not disqualify You from participation in 
   * handle the create/edit/show actions in views (StudentsController)
   * display that date in `ReportsController#subjects` in format `RRRR-MM_DD`
 
-* Add a function that allows storing data about student payments in the database. In the main menu You should add a new section which will direct users to the page with the students list where you can find information about whether they payed their tuition, as well as the date of the payment for each month. Try to use [datatables](https://www.datatables.net/) ([datatables-rails](https://github.com/rweng/jquery-datatables-rails)) so that you can easily search for people in the table using their names and surnames.
+* Add a function that allows storing data about student payments in the database. In the main menu You should add a new section which will direct users to the page with the students list where you can find information about whether they paid for their tuition, as well as the date of the payment for each month. Try to use [datatables](https://www.datatables.net/) ([datatables-rails](https://github.com/rweng/jquery-datatables-rails)) so that you can easily search for people in the table using their names and surnames.
 
 Don't forget to write some specs in rspec for Your code :)
 
