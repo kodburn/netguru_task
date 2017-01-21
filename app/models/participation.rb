@@ -1,3 +1,4 @@
+
 class Participation < ActiveRecord::Base
   belongs_to :student
   belongs_to :subject_item
