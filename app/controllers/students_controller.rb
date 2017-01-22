@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  expose(:student)
+  expose(:students)
   expose(:student, attributes: :student_params)
   expose(:student_subject_items) { student.subject_items }
 
@@ -27,6 +27,6 @@ class StudentsController < ApplicationController
   private
 
   def student_params
-    params.require(:student).permit(:first_name, :last_name)
+    params.require(:student).permit(:first_name, :last_name, subject_item_ids: [])
   end
 end

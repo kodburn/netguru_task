@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources  :teachers
+  resources  :teachers do 
+  	get :subjects
+  end
   resources  :students do
     get :subjects
   end
