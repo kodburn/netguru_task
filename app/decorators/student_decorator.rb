@@ -4,5 +4,11 @@ class StudentDecorator < BaseDecorator
   end
 
   def avg_notes(subject_item)
+    notes = subject_item.subject_item_notes
+    if notes.any?
+      format('%.2f', notes.sum(:value).to_f / notes.length)
+    else
+      format('%.2f', 0)
+    end
   end
 end
